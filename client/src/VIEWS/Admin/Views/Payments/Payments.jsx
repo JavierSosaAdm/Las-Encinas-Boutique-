@@ -1,12 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Conteiner from '../Style/Conteiners.module.css';
 import Style from './Payments.module.css';
-
 import NavBarAdmin from '../../Components/NavBarAdmin/NavBarAdmin';
-
 import { Table, Space, Flex, Spin } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
-
 import { useDeletePaymentMutation, useGetAllPaymentsQuery } from '../../../../libs/redux/services/paymentsApi';
 import SearchBarProducts from '../../Components/SearchBarProducts/SearchBarProducts';
 import { useSelector } from 'react-redux';
@@ -45,13 +42,18 @@ const Payments = () => {
       ?<Spin spinning={loading}><div className="content"/></Spin>
       : 
       <div>
+        
         <NavBarAdmin />
+        
         <div className={Conteiner.Panel} style={{ padding: 0 }}>
           <br/>
+          <h1 className={Style.h1}>Control de Pagos</h1>
+          <br/>
           <SearchBarProducts width={"30vh"} state={"param"} inputname={"nombre o id de pago"}/>
-
-          <div style={{ margin: "4% 5% 0 5%" }}>
+          <br/>
+          <div style={{margin: "1% auto 5% auto"}}>
             {/* <Table dataSource={data} loading={isLoading} style={{color: "red"}}> */}
+            
             <Table dataSource={data} style={{color: "red"}}>
               <ColumnGroup title="Usuario">
                 <Column title="Nombre" dataIndex="user_name" key="user_name" />
