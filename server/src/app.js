@@ -7,18 +7,18 @@ const {Server : SocketServer} = require('socket.io')
 const http = require('http')
 //!instanciando el server
 
-const server=express()
+const server = express();
 const app = http.createServer(server)//Envolvemos a server de express en un servidor http
 const io = new SocketServer(app,{
-  cors:{
+  cors: {
     origin: '*' 
   }
 }) // Creamos una instancia de SocketServer
-io.on('connection', socket =>{
+io.on('connection', socket => {
   console.log(socket.id);
-  socket.on('message',(data)=>{
+  socket.on('message',(data) => {
     console.log(data)
-    socket.broadcast.emit('message',data)     
+    socket.broadcast.emit('message', data)     
   })
 })
 
@@ -27,9 +27,7 @@ io.on('connection', socket =>{
 //!middlewares
 
 server.use(cors())
-
 server.use(morgan("dev"))
-
 server.use(express.json())
 
 
@@ -48,4 +46,4 @@ server.use((req, res, next) => {
 
 server.use(router) 
 
-module.exports=app
+module.exports = app
