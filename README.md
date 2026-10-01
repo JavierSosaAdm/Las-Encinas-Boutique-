@@ -1,19 +1,16 @@
-
-### Bienvenidos a Las Encinas Boutique 🍫
-
+Bienvenidos a Las Encinas Boutique 🍫
 Descripción del Proyecto:
 
 Las Encinas Boutique es un sitio web de E-commerce especializado en la venta de productos comestibles elaborados con chocolate de autor. Ofrecemos productos personalizados según las preferencias de nuestros clientes, utilizando el modelo de encargos para garantizar la máxima satisfacción.
 
-### Tecnologías Utilizadas 💻
+Tecnologías Utilizadas 💻
+-JavaScript
 
--JavaScript 
-         
 -React
 
--Redux Toolkit 
+-Redux Toolkit
 
--Express 
+-Express
 
 -Sequelize
 
@@ -25,14 +22,12 @@ Las Encinas Boutique es un sitio web de E-commerce especializado en la venta de 
 
 -Firebase
 
-
-### Requisitos para Ejecutar Localmente ⚙️
-
+Requisitos para Ejecutar Localmente ⚙️
 1.Instale PostgreSQL.
 
-2. Cree una base de datos con el nombre "las_encinas_boutique".
+Cree una base de datos con el nombre "las_encinas_boutique".
 
-3. Dentro de "./server", cree un archivo ".env" con sus credenciales siguiendo el formato:
+Dentro de "./server", cree un archivo ".env" con sus credenciales siguiendo el formato:
 
 DB_DIALECT=postgres
 
@@ -50,26 +45,17 @@ DB_SERVER_DEPLOY=postgres://las_encinas_boutique_db_k7ak_user:fwOHDrfKTCsMx8Y872
 
 VITE_URL_FRONT=https://las-encinas-boutique-omega.vercel.app/
 
-
-
 Recuerde reemplazar "Su nombre de usuario" y "Su contraseña de Postgres" con sus credenciales.
 
-### Instalación ⚙️
-
+Instalación ⚙️
 Utilice el administrador de paquetes "npm install" para instalar. Ejecute estos comandos dentro de "./server" y "./client":
-
 
 Ejecución Local:
 
 -Front-end: Dentro de "./client", ejecute:
 
-    npm run dev
-    
+npm run dev
 -Back-end: Dentro de "./server", ejecute:
 
-    npm start
-    
-
-### ¡Disfruta explorando Las Encinas Boutique! 🛒✨
-
-
+npm start
+¡Disfruta explorando Las Encinas Boutique! 🛒✨
